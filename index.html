@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUGTRONICS</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16x16.png">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="logo/logo.png" alt="Logo" class="logo">
+        <h1>PUGTRONICS</h1>
+      </div>
+      <div class="search-container">
+        <input type="text" id="buscador" placeholder="Buscar productos..." aria-label="Buscar productos" />
+      </div>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank" class="icon tiktok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="carrusel-section">
+    <div class="carrusel-track">
+      <div class="carrusel-slide"><img src="imagenes/imagen1.jpg" alt="Anuncio 1"></div>
+      <div class="carrusel-slide"><img src="imagenes/imagen2.jpg" alt="Anuncio 2"></div>
+      <div class="carrusel-slide"><img src="imagenes/imagen3.jpg" alt="Anuncio 3"></div>
+    </div>
+    <div class="carrusel-nav"></div>
+    <div class="carrusel-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+  </div>
+
+  <main class="container">
+    <h2>Productos Disponibles</h2>
+    <div class="tabs">
+      <button class="tab-button active" data-categoria="Altavoces">Altavoces</button>
+      <button class="tab-button" data-categoria="Otros productos">Otros productos</button>
+    </div>
+    <div id="productos" class="productos" aria-live="polite"></div>
+  </main>
+
+  <div id="carrito" aria-live="polite">
+    <button id="cerrar-carrito" aria-label="Cerrar carrito">×</button>
+    <h3>Carrito de Compras</h3>
+    <ul id="lista-carrito"></ul>
+    <p>Total: S/ <span id="total">0.00</span></p>
+    <button id="finalizar-compra">Finalizar compra</button>
+  </div>
+
+  <div id="carrito-flotante" title="Ver carrito" aria-label="Ver carrito">
+    🛒 <span class="contador" id="contador-carrito">0</span>
+  </div>
+
+  <a href="https://wa.me/51935462657" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <div id="modal-producto" class="modal">
+    <div class="modal-content">
+      <span id="cerrar-modal" class="cerrar">&times;</span>
+      <img id="modal-imagen" src="" alt="">
+      <h3 id="modal-nombre"></h3>
+      <p id="modal-descripcion"></p>
+      <p><strong>S/ <span id="modal-precio"></span></strong></p>
+      <button id="modal-agregar">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDlHlUShnuLZO7Gni3JrwZcMs7VpHvhf04",
+      authDomain: "tienda-web-50c11.firebaseapp.com",
+      projectId: "tienda-web-50c11",
+      storageBucket: "tienda-web-50c11.firebasestorage.app",
+      messagingSenderId: "227377615585",
+      appId: "1:227377615585:web:09ae2a208ee626ece31da0",
+      measurementId: "G-1HMZ7M8S60"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    window.db = getFirestore(app);
+  </script>
+
+  <script type="module" src="script.js"></script>
+
+  <footer>
+    <div class="footer-container">
+      <img src="logo/logo primario.png" alt="Logo de la tienda" class="footer-logo">
+      <p>&copy; 2025 Tienda Electrónica. Todos los derechos reservados.</p>
+      <p>
+        <a href="https://wa.me/51935462657" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:contacto@tiendaelectronica.com">contacto@tiendaelectronica.com</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
