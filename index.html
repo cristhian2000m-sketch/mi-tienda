@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <!-- ================= HEADER ================= -->
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -28,20 +29,17 @@
     </div>
   </header>
 
-  <div class="carrusel-section">
+  <!-- ================= CARRUSEL ================= -->
+  <section class="carrusel-section">
     <div class="carrusel-track">
-      <div class="carrusel-slide"><img src="imagenes/imagen1.jpg" alt="Anuncio 1"></div>
-      <div class="carrusel-slide"><img src="imagenes/imagen2.jpg" alt="Anuncio 2"></div>
-      <div class="carrusel-slide"><img src="imagenes/imagen3.jpg" alt="Anuncio 3"></div>
+      <div class="carrusel-slide"><img src="imagen1.jpg" alt="Anuncio 1"></div>
+      <div class="carrusel-slide"><img src="imagen2.jpg" alt="Anuncio 2"></div>
+      <div class="carrusel-slide"><img src="imagen3.jpg" alt="Anuncio 3"></div>
     </div>
     <div class="carrusel-nav"></div>
-    <div class="carrusel-dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
-      <span class="dot" data-index="2"></span>
-    </div>
-  </div>
+  </section>
 
+  <!-- ================= MAIN ================= -->
   <main class="container">
     <h2>Productos Disponibles</h2>
     <div class="tabs">
@@ -51,6 +49,7 @@
     <div id="productos" class="productos" aria-live="polite"></div>
   </main>
 
+  <!-- ================= CARRITO ================= -->
   <div id="carrito" aria-live="polite">
     <button id="cerrar-carrito" aria-label="Cerrar carrito">×</button>
     <h3>Carrito de Compras</h3>
@@ -63,10 +62,12 @@
     🛒 <span class="contador" id="contador-carrito">0</span>
   </div>
 
+  <!-- ================= BOTÓN WHATSAPP ================= -->
   <a href="https://wa.me/51935462657" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp" rel="noopener">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <!-- ================= MODAL PRODUCTO ================= -->
   <div id="modal-producto" class="modal">
     <div class="modal-content">
       <span id="cerrar-modal" class="cerrar">&times;</span>
@@ -78,6 +79,7 @@
     </div>
   </div>
 
+  <!-- ================= FIREBASE ================= -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
@@ -98,8 +100,10 @@
     window.db = getFirestore(app);
   </script>
 
+  <!-- ================= SCRIPT PRINCIPAL ================= -->
   <script type="module" src="script.js"></script>
 
+  <!-- ================= FOOTER ================= -->
   <footer>
     <div class="footer-container">
       <img src="logo primario.png" alt="Logo de la tienda" class="footer-logo">
@@ -112,6 +116,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
