@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================
-  // Eventos modal
+  // Eventos modal - SOLO SE CIERRA CON X
   // ==========================
   function cerrarModalProducto() {
     modal.style.display = "none";
@@ -381,13 +381,15 @@ document.addEventListener("DOMContentLoaded", () => {
     productoActual = null;
   }
 
+  // ✅ Solo cerrar con el botón X
   cerrarModal.addEventListener("click", cerrarModalProducto);
 
-  window.addEventListener("click", e => {
-    if (e.target === modal) {
-      cerrarModalProducto();
-    }
-  });
+  // ❌ ELIMINADO: Ya no se cierra al hacer clic fuera del modal
+  // window.addEventListener("click", e => {
+  //   if (e.target === modal) {
+  //     cerrarModalProducto();
+  //   }
+  // });
 
   // 🔹 Cerrar modal con tecla ESC
   document.addEventListener("keydown", e => {
@@ -398,8 +400,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   modalAgregar.addEventListener("click", () => {
     if (productoActual) {
-      agregarAlCarritoId(productoActual.id);
-      cerrarModalProducto();
+      agregarAlCarritoId(productoActual.id, modalAgregar);
+      
+      // Esperar un momento antes de cerrar para que el usuario vea el mensaje
+      setTimeout(() => {
+        cerrarModalProducto();
+      }, 1200);
     }
   });
 
