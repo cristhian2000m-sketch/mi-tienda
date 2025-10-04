@@ -184,15 +184,6 @@ h1 {
   padding: 20px;
 }
 
-main h2 {
-  text-align: center;
-  font-family: "Anta", sans-serif;
-  font-size: 1.8rem;
-  color: #3D6FFF;
-  margin-bottom: 20px;
-  animation: slideFadeIn 0.8s ease forwards;
-}
-
 @keyframes slideFadeIn {
   0% { opacity: 0; transform: translateY(-15px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -657,9 +648,9 @@ footer a:hover {
     height: 250px;
   }
 
-  /* Productos */
+  /* Productos - 2 columnas en tablets */
   .productos {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     padding: 15px;
   }
@@ -671,18 +662,19 @@ footer a:hover {
   /* Carrito */
   #carrito {
     width: 260px;
-    bottom: 70px;
+    bottom: 85px;
   }
 
   #carrito-flotante {
     width: 55px;
     height: 55px;
-    bottom: 80px;
+    bottom: 90px;
   }
 
   .whatsapp-float {
     width: 55px;
     height: 55px;
+    bottom: 20px;
   }
 
   /* Modal */
@@ -719,40 +711,40 @@ footer a:hover {
     font-size: 0.9rem;
   }
 
-  /* Productos */
+  /* PRODUCTOS EN 2 COLUMNAS PARA MÓVILES */
   .productos {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     padding: 10px;
   }
 
   .producto {
-    padding: 12px;
+    padding: 10px;
   }
 
   .producto img {
-    max-height: 140px;
+    max-height: 120px;
   }
 
   .producto h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .producto p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .producto button {
     padding: 8px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
-  /* Carrito */
+  /* CARRITO Y WHATSAPP CON MEJOR ESPACIADO */
   #carrito {
     width: calc(100vw - 20px);
     right: 10px;
     left: 10px;
-    bottom: 70px;
+    bottom: 85px;
     max-height: 60vh;
   }
 
@@ -760,7 +752,7 @@ footer a:hover {
     width: 50px;
     height: 50px;
     font-size: 20px;
-    bottom: 70px;
+    bottom: 95px;
     right: 10px;
   }
 
@@ -768,6 +760,7 @@ footer a:hover {
     width: 50px;
     height: 50px;
     right: 10px;
+    bottom: 15px;
   }
 
   .whatsapp-float i {
@@ -787,7 +780,7 @@ footer a:hover {
   }
 
   .modal-content img {
-    max-height: 200px;
+    max-height: 180px;
   }
 
   /* Footer */
@@ -809,18 +802,51 @@ footer a:hover {
     font-size: 1.2rem;
   }
 
+  /* Productos siguen en 2 columnas pero más compactos */
   .productos {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .producto {
     padding: 8px;
   }
 
   .producto img {
-    max-height: 120px;
+    max-height: 100px;
+  }
+
+  .producto h3 {
+    font-size: 13px;
+  }
+
+  .producto p {
+    font-size: 11px;
   }
 
   #carrito {
     font-size: 12px;
   }
+
+  /* Espaciado entre botones flotantes */
+  #carrito-flotante {
+    width: 45px;
+    height: 45px;
+    bottom: 90px;
+  }
+
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+  }
+
+  .whatsapp-float i {
+    font-size: 22px;
+  }
 }
+
+
 
 
 
