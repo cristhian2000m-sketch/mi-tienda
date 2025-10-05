@@ -125,7 +125,7 @@ h1 {
    CARRUSEL
 ========================== */
 .carrusel-section {
-  margin-top: 100px;
+  margin-top: 80px;
   width: 100%;
   overflow: hidden;
 }
@@ -644,7 +644,7 @@ footer a:hover {
 
   /* Carrusel */
   .carrusel-section {
-    margin-top: 150px;
+    margin-top: 120px;
   }
 
   .carrusel-container {
@@ -735,11 +735,11 @@ footer a:hover {
 
   /* Carrusel */
   .carrusel-section {
-    margin-top: 170px; /* 🔥 Más espacio para el header expandido */
+    margin-top: 120px;
   }
 
   .carrusel-container {
-    height: 90px;
+    height: 180px;
   }
 
   /* Tabs */
@@ -846,9 +846,9 @@ footer a:hover {
     min-height: 40px;
   }
 
-  /* Carrusel con más espacio */
+  /* Carrusel con espacio mínimo */
   .carrusel-section {
-    margin-top: 180px;
+    margin-top: 130px;
   }
 
   /* Productos siguen en 2 columnas pero más compactos */
@@ -894,6 +894,7 @@ footer a:hover {
     font-size: 22px;
   }
 }
+
 
 
 
