@@ -329,9 +329,10 @@ document.addEventListener("DOMContentLoaded", () => {
     total.textContent = totalCompra.toFixed(2);
     setContador(carritoItems.length, false);
 
-    // Event listeners para botones eliminar
+    // ✅ Event listeners para botones eliminar CON stopPropagation
     carritoLista.querySelectorAll(".btn-eliminar").forEach(btn => {
       btn.addEventListener("click", e => {
+        e.stopPropagation(); // 🔥 ESTA ES LA CORRECCIÓN
         const i = Number(e.currentTarget.dataset.index);
         carritoItems.splice(i, 1);
         guardarCarrito();
@@ -383,13 +384,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ✅ Solo cerrar con el botón X
   cerrarModal.addEventListener("click", cerrarModalProducto);
-
-  // ❌ ELIMINADO: Ya no se cierra al hacer clic fuera del modal
-  // window.addEventListener("click", e => {
-  //   if (e.target === modal) {
-  //     cerrarModalProducto();
-  //   }
-  // });
 
   // 🔹 Cerrar modal con tecla ESC
   document.addEventListener("keydown", e => {
@@ -525,4 +519,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🔹 Log de inicio para debugging
   console.log("🎉 Tienda inicializada correctamente");
 });
+
 
