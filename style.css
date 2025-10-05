@@ -625,6 +625,7 @@ footer a:hover {
     width: 60px;
   }
 
+  /* ✅ BUSCADOR MEJORADO PARA TABLET */
   .search-container {
     order: 2;
     width: 100%;
@@ -633,6 +634,8 @@ footer a:hover {
 
   .search-container input {
     max-width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
   }
 
   .social-icons {
@@ -688,6 +691,14 @@ footer a:hover {
 ========================== */
 @media (max-width: 480px) {
   /* Header */
+  header {
+    padding: 8px 10px;
+  }
+
+  .header-content {
+    gap: 8px;
+  }
+
   h1 {
     font-size: 1.4rem;
   }
@@ -696,9 +707,35 @@ footer a:hover {
     width: 50px;
   }
 
+  /* ✅ BUSCADOR CORREGIDO PARA MÓVIL */
+  .search-container {
+    width: 100%;
+    order: 2;
+    margin: 8px 0;
+  }
+
+  .search-container input {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 15px;
+    font-size: 16px; /* 🔥 Evita zoom automático en iOS */
+    border-radius: 25px;
+    min-height: 44px; /* 🔥 Tamaño táctil recomendado */
+  }
+
+  .social-icons {
+    gap: 8px;
+  }
+
+  .social-icons .icon {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+
   /* Carrusel */
   .carrusel-section {
-    margin-top: 160px;
+    margin-top: 170px; /* 🔥 Más espacio para el header expandido */
   }
 
   .carrusel-container {
@@ -800,6 +837,18 @@ footer a:hover {
 @media (max-width: 360px) {
   h1 {
     font-size: 1.2rem;
+  }
+
+  /* ✅ BUSCADOR OPTIMIZADO PARA PANTALLAS MUY PEQUEÑAS */
+  .search-container input {
+    padding: 10px 12px;
+    font-size: 16px; /* 🔥 Mantener 16px mínimo para evitar zoom */
+    min-height: 40px;
+  }
+
+  /* Carrusel con más espacio */
+  .carrusel-section {
+    margin-top: 180px;
   }
 
   /* Productos siguen en 2 columnas pero más compactos */
